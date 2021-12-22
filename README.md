@@ -1,2 +1,2 @@
-# redis-search
-spring data redis
+# Tiny URL Generator
+
