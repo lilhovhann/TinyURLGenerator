@@ -1,0 +1,33 @@
+management:     
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+  endpoints:
+    jmx:
+      exposure:
+       include: '*'
+    web:
+     exposure:
+      include: '*'
+      base-path: /actuator
+    cors:
+      allowed-origins: 'true'
+      enabled-by-default: 'false'
+    
+server:
+    port: 8004
+    
+spring:
+  redis:
+    ttl: 86400 
+    host: redis
+    port: 6379
+
+  application:
+    name: tiny
+ 
+ 
+
+
+ 
