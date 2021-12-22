@@ -1,3 +1,3 @@
 # URL SHORTENER
 
-![N|Solid](https://www.kindpng.com/picc/m/23-230826_url-shortener-logo-hd-png-download.png)
+![N|Solid](https://smsmagic-13d6c.kxcdn.com/wp-content/uploads/2021/01/Shorten-URL-1024x635.png)
