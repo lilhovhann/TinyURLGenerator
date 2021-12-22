@@ -7,10 +7,14 @@
 ./run.sh
 ```
 ## Restart
+```sh
 ./restart.sh <container_name>
+```
 
 ## Clean containers
+```sh
 ./clean.sh
+```
 
 ## Swagger link
 http://localhost:8004/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
