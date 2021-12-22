@@ -24,3 +24,10 @@ http://localhost:8004/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-confi
 - ✨Generates unique short url for given url✨
 - ✨Saves it in redis ✨
 - ✨Gives redirection link to access given url✨
+
+
+## Tech
+
+-Spring 
+-Java
+-Redis
