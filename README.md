@@ -28,6 +28,6 @@ http://localhost:8004/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-confi
 
 ## Tech
 
--Spring 
--Java
--Redis
+- Spring 
+- Java
+- Redis
