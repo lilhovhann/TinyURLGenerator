@@ -6,11 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureWebMvc;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
-import tiny.TinyApplication;
 import tiny.services.TinyUrlService;
 
 /**
@@ -19,23 +15,19 @@ import tiny.services.TinyUrlService;
  */
 @RunWith(SpringRunner.class)
 @AutoConfigureWebMvc
-
+//@SpringBootTest
 public class TinyUrlServiceTest {
 
-    @Autowired
-    private TinyUrlService tinyUrlService;
-    
-    @Test
-    public void hello(){
-         System.out.println("Hey");
-    }
+ 
+    private TinyUrlService tinyUrlService = new TinyUrlService();
 
-//    @Test
-//    public void letsTest() throws Exception {
-////        String result = tinyUrlService.letsTest("Lilit");
-//        System.out.println("Hey");
-////        Assert.assertEquals("Hi Lilit", result);
-//    }
+    @Test
+    public void letsTest() {
+        String result = tinyUrlService.letsTest("Lilit");
+//        String result = "Hey";
+        System.out.println("Hey");
+        Assert.assertEquals("Hi Lilit", result);
+    }
 
     @Before
     public void setUp() throws Exception {
