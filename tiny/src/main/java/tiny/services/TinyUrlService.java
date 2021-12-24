@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import java.util.concurrent.TimeUnit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.data.redis.core.RedisTemplate;
+//import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import tiny.domain.TinyUrlModel;
 
@@ -17,8 +17,8 @@ import tiny.domain.TinyUrlModel;
 @Service
 public class TinyUrlService {
 
-    @Autowired
-    private RedisTemplate<String, TinyUrlModel> redisTemplate;
+//    @Autowired
+//    private RedisTemplate<String, TinyUrlModel> redisTemplate;
 
     @Value("${spring.redis.ttl}")
     private long ttl;
@@ -27,17 +27,21 @@ public class TinyUrlService {
         final String id = Hashing.murmur3_32().hashString(url, StandardCharsets.UTF_8).toString();
 
         TinyUrlModel tinyUrl = new TinyUrlModel(id, url, LocalDateTime.now());
-        redisTemplate.opsForValue().set(id, tinyUrl, ttl, TimeUnit.DAYS);
+        //redisTemplate.opsForValue().set(id, tinyUrl, ttl, TimeUnit.DAYS);
         return id;
     }
 
-    public String findUrl(String id) {
-        final TinyUrlModel result = redisTemplate.opsForValue().get(id);
-        if (!result.getUrl().isEmpty()) {
-            return result.getUrl();
-        }
-
-        return null;
-
+//    public String findUrl(String id) {
+//        final TinyUrlModel result = redisTemplate.opsForValue().get(id);
+//        if (!result.getUrl().isEmpty()) {
+//            return result.getUrl();
+//        }
+//
+//        return null;
+//
+//    }
+    
+    public String letsTest(String name){
+        return "Hi "+name;
     }
 }

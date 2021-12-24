@@ -5,13 +5,10 @@ import org.apache.commons.validator.routines.UrlValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.view.RedirectView;
 import tiny.services.TinyUrlService;
 
 /**
@@ -44,18 +41,18 @@ public class TinyUrlController {
 
     }
 
-    @GetMapping(path = "/get")
-    public RedirectView redirect(@RequestParam String id) {
-
-        String foundUrl = tinyUrlService.findUrl(id);
-
-        if (foundUrl != null) {
-            log.info("Redirecting url " + foundUrl);
-            return new RedirectView(foundUrl);
-        }
-        log.info("URL Not found");
-        return new RedirectView("google.com");
-
-    }
+//    @GetMapping(path = "/get")
+//    public RedirectView redirect(@RequestParam String id) {
+//
+//        String foundUrl = tinyUrlService.findUrl(id);
+//
+//        if (foundUrl != null) {
+//            log.info("Redirecting url " + foundUrl);
+//            return new RedirectView(foundUrl);
+//        }
+//        log.info("URL Not found");
+//        return new RedirectView("google.com");
+//
+//    }
 
 }
